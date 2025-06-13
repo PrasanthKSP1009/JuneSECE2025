@@ -16,7 +16,7 @@ const Signup = () => {
       alert("Password and Cnf Password doesn't match");
       return;
     }
-    const res = await axios.post("http://localhost:8000/signup", {
+    const res = await axios.post("https://junesece2025.onrender.com/signup", {
       fname: fname,
       lname: lname,
       uname: uname,

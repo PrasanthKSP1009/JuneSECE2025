@@ -10,7 +10,7 @@ const Login = () => {
   async function login(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/login", {
+      const res = await axios.post("https://junesece2025.onrender.com/login", {
         username: username,
         password: password,
       });
