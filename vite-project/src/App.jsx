@@ -17,7 +17,6 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          {console.log("inside routes", isLogin)}
           <Route path="/" element={isLogin ? <Home /> : <Login />} />
           <Route path="/cse" element={isLogin ? <CSE /> : <Login />} />
           <Route path="/it" element={isLogin ? <IT /> : <Login />} />

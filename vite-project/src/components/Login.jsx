@@ -1,16 +1,14 @@
 // Login.jsx
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   async function login(e) {
     e.preventDefault();
-
     try {
       const res = await axios.post("http://localhost:8000/login", {
         username: username,
@@ -20,9 +18,9 @@ const Login = () => {
       const { message, isLogin } = res.data;
 
       if (isLogin) {
-        localStorage.setItem("isLogin", "true"); // store as string
+        localStorage.setItem("isLogin", "true");
         alert(message);
-        window.location.href = "/"; // force reload so App.jsx sees updated localStorage
+        window.location.href = "/";
       } else {
         localStorage.setItem("isLogin", "false");
         alert(message);
