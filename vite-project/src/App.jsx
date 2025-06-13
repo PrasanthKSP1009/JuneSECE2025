@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Login from "./components/Login";
-import CSE from "./components/courses/CSE";
+import CSE from "./components/courses/Cse";
 import CCE from "./components/courses/CCE";
 import IT from "./components/courses/IT";
-import AIML from "./components/courses/AIML";
-import AIDS from "./components/courses/AIDS";
+import AIML from "./components/courses/AiMl";
+import AIDS from "./components/courses/AiDs";
 import Signup from "./components/Signup";
 
 function App() {
